@@ -6,7 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-*Hi my name is Brian, I'm excited about this project because I have to be!
+* Hi my name is Brian, I'm excited about this project because I have to be!
+* Hi my name is Simrat, I'm excited about this project because I like programming.
 	
 ## Technologies
 Technologies used for this project:
