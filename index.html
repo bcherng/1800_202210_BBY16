@@ -6,6 +6,8 @@
     <meta name="comp1800 boilerplate code" content="my bcit project" />
     <meta name="author" content="BCIT" />
 
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,11 +18,8 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid" style="background: steelblue">
-        <img src="./images/user-icon.png" style="height: 100px; width: 100px" />
-        <a class="navbar-brand mx-auto" href="#" stlye="margin-right:50%;"
-          >Olympic-K</a
-        >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Olympic-k</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,47 +28,53 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        ></button>
-        <span class="navbar-toggler-icon"></span>
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <p>dropdown</p>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Leaderboard</a></li>
-              <li><a class="dropdown-item" href="#">On-going Events</a></li>
-              <li><a class="dropdown-item" href="#">Prediction</a></li>
-              <li><a class="dropdown-item" href="#">Points Redemption</a></li>
-              <li><a class="dropdown-item" href="#">Friends List</a></li>
-            </ul>
-          </li>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Leaderboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                You
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Friends</a></li>
+                <li><a class="dropdown-item" href="#">Predictions</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
-    <form class="d-flex">
-      <input
-        class="form-control me-2"
-        type="search"
-        style="margin-left: 1%; margin-right: 20%"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button
-        class="btn btn-outline-success"
-        style="background: lightblue"
-        type="submit"
-      >
-        Search
-      </button>
-    </form>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
