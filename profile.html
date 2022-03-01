@@ -18,14 +18,7 @@
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
-
   </head>
 
   <body>
@@ -33,7 +26,13 @@
     <h1 class="visually-hidden">Heroes examples</h1>
 
     <div class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4" src="/images/user-icon.png" alt="" width="150" height="150">
+      <img
+        class="d-block mx-auto mb-4"
+        src="/images/user-icon.png"
+        alt=""
+        width="150"
+        height="150"
+      />
       <h1 class="display-5 fw-bold">USERNAME</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Joined xx/xx/xxxx.</p>
@@ -43,8 +42,8 @@
       </div>
     </div>
 
-    <div class="card mx-auto my-3" style="width: 30rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card mx-auto my-3" style="width: 30rem">
+      <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Past Prediction</h5>
         <p class="card-text">Predicted on xx/xx/xxxx.</p>
@@ -52,8 +51,8 @@
       </div>
     </div>
 
-    <div class="card mx-auto my-3" style="width: 30rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card mx-auto my-3" style="width: 30rem">
+      <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Past Prediction</h5>
         <p class="card-text">Predicted on xx/xx/xxxx.</p>
@@ -61,17 +60,19 @@
       </div>
     </div>
 
-    <div class="card mx-auto my-3" style="width: 30rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card mx-auto my-3" style="width: 30rem">
+      <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Current Prediction</h5>
         <p class="card-text">Predicted on xx/xx/xxxx..</p>
-        <a href="#" class="btn btn-primary disabled" aria-disabled="true">Awaiting Results...</a>
+        <a href="#" class="btn btn-primary disabled" aria-disabled="true"
+          >Awaiting Results...</a
+        >
       </div>
     </div>
 
-    <div class="card mx-auto my-3" style="width: 30rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card mx-auto my-3" style="width: 30rem">
+      <img src="..." class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Available Prediction</h5>
         <p class="card-text">Predict now!</p>
@@ -90,7 +91,6 @@
     ></script>
 
     <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
-    <!-- <script src = "scripts/authentication.js"></script> -->
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/templates/index.js"></script>
   </body>
 </html>
