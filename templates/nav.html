@@ -1,29 +1,36 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
   <a class="navbar-brand" href="#">Olympic-k</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Leaderboard</a>
+        <a class="nav-link" href="/leaderboard.html">Leaderboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Events</a>
+        <a class="nav-link" href="/profile.html">Profile</a>
       </li>
-      <li class="nav-item dropdown">
-        <a
+      <li class="nav-item">
+        <a class="nav-link" href="/friends.html">Friends</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html" id="log-out">Log Out</a>
+      </li>
+      <!-- <li class="nav-item pull-right">
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>  
+        </li> -->
+
+      <!-- <a
           class="nav-link dropdown-toggle"
           href="#"
           id="navbarDropdown"
@@ -32,14 +39,15 @@
           aria-expanded="false"
         >
           You
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Friends</a></li>
-          <li><a class="dropdown-item" href="#">Predictions</a></li>
-          <li><a class="dropdown-item" id="log-out" href="#">Log Out</a></li>
-        </ul>
+        </a> -->
+      <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+      <!-- </ul> -->
       </li>
     </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
   </div>
 </nav>
