@@ -5,7 +5,7 @@ export function isLoggedIn() {
     return token !== null;
 }
 
-export function logIn(token) {
+export async function logIn(token) {
     const storage = window.localStorage;
     storage.setItem("token", token);
 }

@@ -1,13 +1,33 @@
 import { logIn } from "./index/login.js";
+import { db } from "./firebaseAPI_TEAM_BBY_16.js";
 
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 var uiConfig = {
   callbacks: {
-    signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+    signInSuccessWithAuthResult: async function (authResult, redirectUrl) {
       logIn(authResult.user.uid);
-      return true;
+
+      if (authResult.additionalUserInfo.isNewUser) {
+        var user = authResult.user;
+
+        db.collection("users")
+          // define a document for a user with UID as a document ID
+          .doc(user.uid)
+          .set({
+            name: user.displayName,
+            email: user.email,
+          })
+          .then(function () {
+            window.location.assign("/home.html");
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      } else {
+        window.location.assign("/home.html");
+      }
     },
     uiShown: function () {
       // The widget is rendered.
