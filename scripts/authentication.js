@@ -1,44 +1,43 @@
-import { logIn } from "./index/login.js";
 import { db } from "./firebaseAPI_TEAM_BBY_16.js";
+import { getAuth, EmailAuthProvider } from "firebase/auth";
+
+import * as firebaseui from "firebaseui";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { logIn } from "./index/login.js";
 
 // Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+var ui = new firebaseui.auth.AuthUI(getAuth());
 
 var uiConfig = {
   callbacks: {
-    signInSuccessWithAuthResult: async function (authResult, redirectUrl) {
-      logIn(authResult.user.uid);
+    signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+      var user = authResult.user;
+      logIn(user.uid);
 
       if (authResult.additionalUserInfo.isNewUser) {
-        var user = authResult.user;
-
-        db.collection("users")
-          // define a document for a user with UID as a document ID
-          .doc(user.uid)
-          .set({
-            name: user.displayName,
-            email: user.email,
-          })
-          .then(function () {
-            window.location.assign("/home.html");
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        setDoc(doc(db, `users/${user.uid}`), {
+          name: user.displayName,
+          email: user.email,
+          timestamp: serverTimestamp(),
+          points: 0,
+          leaderboardPos: 0,
+        }).then(() => {
+          window.location.assign("/home.html");
+        });
       } else {
         window.location.assign("/home.html");
       }
+
+      return false;
     },
     uiShown: function () {
-      // The widget is rendered.
-      // Hide the loader.
       document.getElementById("loader").style.display = "none";
     },
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: "popup",
-  signInSuccessUrl: "/home.html",
-  signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
+  signInSuccessUrl: "",
+  signInOptions: [EmailAuthProvider.PROVIDER_ID],
   // Terms of service url.
   tosUrl: "<your-tos-url>",
   // Privacy policy url.
