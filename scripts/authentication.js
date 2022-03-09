@@ -21,6 +21,7 @@ var uiConfig = {
           timestamp: serverTimestamp(),
           points: 0,
           leaderboardPos: 0,
+          predictionsMade: 0,
         }).then(() => {
           window.location.assign("/home.html");
         });

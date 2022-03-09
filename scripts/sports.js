@@ -1,10 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const sportName = urlParams.get('sport');
-// const sportName = "biathlon";
-// console.log(sportName);
-// document.getElementById("sportsNamePlaceHolder").innerHTML
-    // = sportName;
+
 import { db } from "./firebaseAPI_TEAM_BBY_16.js"
 import { doc, getDoc } from "firebase/firestore";
 
