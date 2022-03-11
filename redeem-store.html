@@ -32,7 +32,9 @@
     <div class="album py-5 bg-light">
       <div class="container">
         
-        <div class="d-flex justify-content-end"><i>Points placeholder</i></div>
+        <div class="d-flex justify-content-end" >
+          <p class="lead mb-4"><b><span id="PointsPlaceHolder"></span> points.</b></p>
+        </div>
         <!--Redeem cards-->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
           
@@ -43,7 +45,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()">Redeem</button>
                 </div>
               </div>
             </div>
@@ -56,7 +58,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem"  onclick="pointChecker()">Redeem</button>
                 </div>
               </div>
             </div>
@@ -69,7 +71,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -82,7 +84,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -95,7 +97,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -108,7 +110,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()">Redeem</button>
                 </div>
               </div>
             </div>
@@ -121,7 +123,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -134,7 +136,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -147,7 +149,7 @@
                 <p class="card-text text-center">Gift Card</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy" >Redeem</button>
+                  <button type="button" class="btn btn-primary button-copy " onclick="pointChecker()" >Redeem</button>
                 </div>
               </div>
             </div>
@@ -167,5 +169,6 @@
 
     <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
     <script type="module" src="./scripts/templates/index.js"></script>
+    <script type="module" src="./scripts/redeem-store.js"></script>
   </body>
 </html>
