@@ -1,174 +1,179 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Olympic-k</title>
-    <meta name="Olympic-k" content="my bcit project" />
-    <meta name="author" content="BCIT" />
 
-    <link rel="stylesheet" href="./styles/style.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>Olympic-k</title>
+  <meta name="Olympic-k" content="my bcit project" />
+  <meta name="author" content="BCIT" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
+  <link rel="stylesheet" href="./styles/style.css" />
 
-  <body>
-    <div id="nav-placeholder"></div>
-    
-    <!-- CONTENT -->
-    <section class="py-5 text-center container">
-      <div class="row py-lg-2">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <img id ="redeemImage" src = "images/redeem1.png"/>
-          <!-- <h1 class="fw-light fw-bold">Redeem your rewards</h1> -->
-        </div>
-      </div>
-    </section>
-  
-    <div class="album py-5 bg-light">
-      <div class="container">
-        
-        <div class="d-flex justify-content-end" >
-          <p class="lead mb-4"><b><span id="PointsPlaceHolder"></span> points.</b></p>
-        </div>
-        <!--Redeem cards-->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-          
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()">Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
 
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem"  onclick="pointChecker()">Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
+<body>
+  <div id="nav-placeholder"></div>
 
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()">Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy redeem" onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img  width="100%" height="225" src="/images/giftcard.jpg">
-              <div class="card-body">
-                <p class="card-text text-center">Gift Card</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Last Updated: 9 mins ago</small>
-                  <button type="button" class="btn btn-primary button-copy " onclick="pointChecker()" >Redeem</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+  <!-- CONTENT -->
+  <section class="py-5 text-center container">
+    <div class="row py-lg-2">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <img id="redeemImage" src="images/redeem1.png" />
+        <!-- <h1 class="fw-light fw-bold">Redeem your rewards</h1> -->
       </div>
     </div>
-    
-    <div id="footer-placeholder"></div>
+  </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-    <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
-    <script type="module" src="./scripts/templates/index.js"></script>
-    <script type="module" src="./scripts/redeem-store.js"></script>
-  </body>
+      <div class="d-flex justify-content-end">
+        <p class="lead mb-4"><b><span id="PointsPlaceHolder"></span> points.</b></p>
+      </div>
+      <!--Redeem cards-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center"><span id="option1"></span></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy redeem"
+                  onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width="100%" height="225" src="/images/giftcard.jpg">
+            <div class="card-body">
+              <p class="card-text text-center">Gift Card</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Last Updated: 9 mins ago</small>
+                <button type="button" class="btn btn-primary button-copy " onclick="pointChecker()">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
+  <script type="module" src="./scripts/templates/index.js"></script>
+  <script type="module" src="./scripts/redeem-store.js"></script>
+</body>
+
 </html>

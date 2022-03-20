@@ -4,9 +4,9 @@ import { doc, getDoc } from "firebase/firestore";
 
 const token = window.localStorage.getItem("token");
 
-const docRef = doc(db, "users", token);
-const docSnap = await getDoc(docRef);
-
+const docRef1 = doc(db, "users", token);
+const docSnap = await getDoc(docRef1);
+console.log(docSnap)
 
 if (docSnap.exists()) {
     const target = docSnap.data().points;
@@ -27,4 +27,14 @@ function pointChecker() {
         console.log("Redeem sucessful");
         target -= 5;
     }
+ }
+
+ const docRef = doc(db, "Rewards", CompanyName);
+ const docSnap1 = await getDoc(docRef);
+console.log(docSnap1)
+ if (docSnap1.exists()) {
+     const reward = docSnap1.data();
+     let reward1 = document.getElementById("option1");
+     reward1.innerHTML = reward.Company;
+     
  }
