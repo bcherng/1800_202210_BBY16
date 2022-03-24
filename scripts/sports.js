@@ -15,7 +15,6 @@ function update() {
   getDocs(cllection).then((snap) => {
     snap.forEach((doc) => {
       var data = doc.data();
-      console.log(data);
 
       if (data.Name === sportName) {
         document.getElementById("sportsNamePlaceHolder").innerHTML =
