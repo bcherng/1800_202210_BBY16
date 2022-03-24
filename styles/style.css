@@ -1,27 +1,89 @@
 .navbar-brand {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .hero-description {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 #copyright {
-    margin-left: 0%;
-    width:2%;
+  margin-left: 0%;
+  width: 2%;
 }
 
 body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
 }
 
 #redeemImage {
-    width:100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.options{
-display: flex;
+.options {
+  display: flex;
+}
+
+#carousel {
+    position: relative;
+    height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+.splide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#filter {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    position: absolute;
+    pointer-events: none;
+}
+
+#carousel section {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+}
+
+.splide__track {
+  height: 100%;
+}
+
+.splide__slide {
+    display: grid;
+    place-items: center;
+}
+
+#splide01-slide01 {
+  background-color: cornflowerblue;
+}
+
+#splide01-slide02 {
+  background-color: cadetblue;
+}
+
+#splide01-slide03 {
+  background-color: burlywood;
+}
+
+#sportsNamePlaceHolder {
+    color: aliceblue;
+}
+
+#sportsDescriptionPlaceHolder {
+    color: bisque;
 }

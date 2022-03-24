@@ -11,6 +11,8 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "@splidejs/splide": "^3.6.12",
     "firebase": "^9.6.8",
     "firebaseui": "^0.600.0"
   }
