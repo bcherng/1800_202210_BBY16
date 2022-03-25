@@ -11,6 +11,13 @@ readFileAndSetHtml("nav-placeholder", "/templates/nav.html.txt").then(() => {
       window.location.href = "/";
     });
   }
+
+  const searchButton = document.getElementById("search-button");
+  searchButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    let latest = document.getElementById("search-input");
+    window.location.href = `/search.html?name=${latest.value}`;
+  });
 });
 
 readFileAndSetHtml("footer-placeholder", "/templates/footer.html.txt");
