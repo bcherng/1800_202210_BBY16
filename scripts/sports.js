@@ -122,6 +122,7 @@ document.getElementById("submit").addEventListener("click", () => {
 
     updateDoc(userDoc, {
       predictions: updates,
+      predictionsMade: data.predictionsMade + 1,
     }).then(() => {
       window.location.reload();
     });
