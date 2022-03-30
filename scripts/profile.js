@@ -37,7 +37,9 @@ async function setPastPredictions(userData) {
       "incorrect-prediction-template"
     );
     const pendingNode = document.getElementById("pending-prediction-template");
-    const redeemedNode = document.getElementById("redeemed-prediction-template");
+    const redeemedNode = document.getElementById(
+      "redeemed-prediction-template"
+    );
 
     card.querySelectorAll("h3")[0].innerText = name;
     card.querySelectorAll("p")[0].innerText = country;
@@ -72,11 +74,13 @@ async function setPastPredictions(userData) {
       btn.addEventListener("click", () => {
         getDoc(userDoc).then((snap) => {
           let initial = snap.data().redeemed || [];
+          let points = snap.data().points;
 
           let final = [...initial, name];
 
           updateDoc(userDoc, {
             redeemed: final,
+            points: (points += 50),
           }).then(() => {
             btn.disabled = true;
           });
