@@ -25,11 +25,15 @@ async function update() {
   let cardHolder = document.getElementById("user-cards");
 
   result.forEach((val) => {
-    console.log(val);
     let cardTemp = template.content.cloneNode(true);
 
     cardTemp.querySelectorAll(".card-title")[0].innerText = val.item.name;
     cardTemp.querySelectorAll(".card-text")[0].innerText = val.item.name;
+
+
+    cardTemp.querySelectorAll("#view_profile")[0].addEventListener('click', function() {
+      window.location.href = `/profile.html?uid=${val.item.id}`
+    })
 
     cardHolder.appendChild(cardTemp);
   });
