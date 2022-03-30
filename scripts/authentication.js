@@ -22,6 +22,9 @@ var uiConfig = {
           points: 0,
           leaderboardPos: 0,
           predictionsMade: 0,
+          correctPredictions: 0,
+          predictions: [],
+          redeemed: [],
         }).then(() => {
           window.location.assign("/home.html");
         });
