@@ -3,18 +3,26 @@ const urlParams = new URLSearchParams(queryString);
 const sportName = urlParams.get("sport");
 
 import { db } from "./firebaseAPI_TEAM_BBY_16.js";
-import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore";
 
 import Splide from "@splidejs/splide";
+import { getID } from "./index/login.js";
 
 new Splide(".splide").mount();
 
 function update() {
-  var cllection = collection(db, "sportsData");
+  let sportsCollection = collection(db, "sportsData");
 
-  getDocs(cllection).then((snap) => {
+  getDocs(sportsCollection).then((snap) => {
     snap.forEach((doc) => {
-      var data = doc.data();
+      let data = doc.data();
 
       if (data.Name === sportName) {
         document.getElementById("sportsNamePlaceHolder").innerHTML =
@@ -33,12 +41,55 @@ function update() {
         document.getElementById("option1").innerHTML = data.Option1;
         document.getElementById("option2").innerHTML = data.Option2;
         document.getElementById("option3").innerHTML = data.Option3;
+        document.getElementById("option4").innerHTML = data.Option4;
       }
     });
   });
 }
 
 update();
+
+document.getElementById("submit").addEventListener("click", () => {
+  let userDoc = doc(db, `users/${getID()}`);
+
+  getDoc(userDoc).then((dbDoc) => {
+    const data = dbDoc.data();
+
+    var checked = " ";
+
+    let radio1 = document.getElementById("flexRadioDefault1");
+    let option1 = document.getElementById("option1");
+
+    let radio2 = document.getElementById("flexRadioDefault2");
+    let option2 = document.getElementById("option2");
+
+    let radio3 = document.getElementById("flexRadioDefault3");
+    let option3 = document.getElementById("option3");
+
+    let radio4 = document.getElementById("flexRadioDefault4");
+    let option4 = document.getElementById("option4");
+
+    if (radio1.checked) {
+      checked = option1.innerText;
+    } else if (radio2.checked) {
+      checked = option2.innerText;
+    } else if (radio3.checked) {
+      checked = option3.innerText;
+    } else if (radio4.checked) {
+      checked = option4.innerText;
+    }
+
+    const initial = data.predictions || {};
+    const updates = {
+      ...initial,
+      [sportName]: checked,
+    };
+
+    updateDoc(userDoc, {
+      predictions: updates,
+    });
+  });
+});
 
 function writeSportsData() {
   var ref = collection(db, "sportsData");
