@@ -10,7 +10,7 @@ import {
 async function update() {
   let users = collection(db, "users");
 
-  const orderedUsers = query(users, orderBy("leaderboardPos", "asc"));
+  const orderedUsers = query(users, orderBy("correctPredictions", "desc"));
 
   const docs = await getDocs(orderedUsers)
 
@@ -23,7 +23,7 @@ async function update() {
     let cardTemp = template.content.cloneNode(true);
 
     cardTemp.querySelectorAll(".card-title")[0].innerText = data.name;
-    cardTemp.querySelectorAll(".card-text")[0].innerText = "#" + data.leaderboardPos;
+    cardTemp.querySelectorAll(".card-text")[0].innerText = data.correctPredictions + " Win(s)";
 
     cardTemp.querySelectorAll("#view_profile")[0].addEventListener('click', function() {
       window.location.href = `/profile.html?uid=${doc.id}`
