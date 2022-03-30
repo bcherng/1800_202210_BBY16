@@ -25,7 +25,7 @@ async function setPastPredictions(userData) {
 
   let userDoc = doc(db, `users/${getID()}`);
   let snap = await getDoc(userDoc);
-  let redeemed = snap.data().redeemed || [];
+  let redeemedSports = snap.data().redeemed || [];
 
   Object.entries(userData.predictions).forEach(([name, country]) => {
     const template = document.getElementById("past-predictions-template");
@@ -46,23 +46,35 @@ async function setPastPredictions(userData) {
 
     const btn = card.querySelectorAll("#redeem")[0];
 
+    let redeemed = redeemedNode.content.cloneNode(true);
+    redeemed.firstElementChild.id = `redeemed-${name}`;
+
+    let correct = correctNode.content.cloneNode(true);
+    correct.firstElementChild.id = `correct-${name}`;
+
+    let incorrect = incorrectNode.content.cloneNode(true);
+    incorrect.firstElementChild.id = `incorect-${name}`;
+
+    let pending = pendingNode.content.cloneNode(true);
+    pending.firstElementChild.id = `pending-${name}`;
+
     for (let doc of results.docs) {
       const id = doc.id;
       const data = doc.data();
 
-      if (redeemed.includes(name)) {
+      if (redeemedSports.includes(name)) {
         btn.disabled = true;
-        card.appendChild(redeemedNode.content.cloneNode(true));
+        card.appendChild(redeemed);
       } else {
         if (id == name && data.winner == country) {
           btn.disabled = false;
-          card.appendChild(correctNode.content.cloneNode(true));
+          card.appendChild(correct);
           break;
         } else if (id == name && data.winner !== country) {
-          card.appendChild(incorrectNode.content.cloneNode(true));
+          card.appendChild(incorrect);
           break;
         } else {
-          card.appendChild(pendingNode.content.cloneNode(true));
+          card.appendChild(pending);
           break;
         }
       }
@@ -82,8 +94,16 @@ async function setPastPredictions(userData) {
             redeemed: final,
             points: (points += 50),
           }).then(() => {
-            btn.disabled = true;
+            getDoc(userDoc).then((snap) => {
+              document.getElementById("userPointsPlaceHolder").innerHTML =
+                snap.data().points;
+                alert(`Congratulations! You redeemed ${name} to get 50 points.`)
+            });
           });
+          let correctElement = document.getElementById(`correct-${name}`);
+          correctElement.className = "redeemed-prediction";
+          correctElement.innerText = "Already Redeemed";
+          btn.disabled = true
         });
       });
     }
