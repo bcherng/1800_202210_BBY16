@@ -100,3 +100,7 @@ body {
   display: grid;
   place-items: center;
 }
+
+#prediction-thanks {
+  display: none;
+}

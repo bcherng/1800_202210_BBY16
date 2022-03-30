@@ -20,6 +20,17 @@ new Splide(".splide").mount();
 function update() {
   let sportsCollection = collection(db, "sportsData");
 
+  hasPredicted().then((ret) => {
+    if (ret) {
+      document.getElementById("prediction-thanks").style.display = "grid";
+      document.getElementById("prediction-thanks").style.placeContent =
+        "center";
+      document.getElementById("prediction-thanks").style.placeItems = "center";
+
+      document.getElementById("predictionPlaceHolder").style.display = "none";
+    }
+  });
+
   getDocs(sportsCollection).then((snap) => {
     snap.forEach((doc) => {
       let data = doc.data();
@@ -35,8 +46,7 @@ function update() {
           "no-repeat";
         document.getElementById("splide01-slide01").style.backgroundSize =
           "cover";
-        document.getElementById("splide01-slide01").style.height =
-          "100%";
+        document.getElementById("splide01-slide01").style.height = "100%";
 
         document.getElementById("splide01-slide02").style.backgroundImage =
           "url(" + data.banners[1] + ")";
@@ -44,8 +54,7 @@ function update() {
           "no-repeat";
         document.getElementById("splide01-slide02").style.backgroundSize =
           "cover";
-        document.getElementById("splide01-slide02").style.height =
-          "100%";
+        document.getElementById("splide01-slide02").style.height = "100%";
 
         document.getElementById("splide01-slide03").style.backgroundImage =
           "url(" + data.banners[2] + ")";
@@ -53,8 +62,7 @@ function update() {
           "no-repeat";
         document.getElementById("splide01-slide03").style.backgroundSize =
           "cover";
-        document.getElementById("splide01-slide03").style.height =
-          "100%";
+        document.getElementById("splide01-slide03").style.height = "100%";
 
         document.getElementById("question").innerHTML = data.Question;
         document.getElementById("option1").innerHTML = data.Option1;
@@ -67,6 +75,14 @@ function update() {
 }
 
 update();
+
+async function hasPredicted() {
+  let userDoc = doc(db, `users/${getID()}`);
+
+  let data = (await getDoc(userDoc)).data();
+
+  return data.predictions.hasOwnProperty(sportName);
+}
 
 document.getElementById("submit").addEventListener("click", () => {
   let userDoc = doc(db, `users/${getID()}`);
@@ -106,6 +122,8 @@ document.getElementById("submit").addEventListener("click", () => {
 
     updateDoc(userDoc, {
       predictions: updates,
+    }).then(() => {
+      window.location.reload();
     });
   });
 });
