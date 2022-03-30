@@ -29,12 +29,29 @@ function pointChecker() {
     }
  }
 
- const docRef = doc(db, "Rewards", CompanyName);
- const docSnap1 = await getDoc(docRef);
-console.log(docSnap1)
- if (docSnap1.exists()) {
-     const reward = docSnap1.data();
-     let reward1 = document.getElementById("option1");
-     reward1.innerHTML = reward.Company;
-     
- }
+ const docRef2 = doc(db, "Rewards","giftCards");
+ const docSnap2 = await getDoc(docRef2);
+console.log(docSnap2)
+
+// Adds info such as name, point and image.
+if(docSnap2.exists()){
+    const target2 = docSnap2.data();
+    console.log(target2);
+    var i = 1;
+    target2.cards.forEach(reward => {
+       let option = document.getElementById(`option${i}`);
+       let points = document.getElementById(`point${i}`);
+       let img = document.getElementById(`image${i}`);
+
+       img.setAttribute("src", reward.img);
+
+       points.innerHTML = reward.points + " points";
+       option.innerHTML = reward.name;
+
+       i++;
+    });
+}
+
+
+
+ 
