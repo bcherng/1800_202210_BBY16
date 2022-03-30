@@ -104,3 +104,9 @@ body {
 #prediction-thanks {
   display: none;
 }
+
+#past-data-table {
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
