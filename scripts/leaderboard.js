@@ -25,6 +25,10 @@ async function update() {
     cardTemp.querySelectorAll(".card-title")[0].innerText = data.name;
     cardTemp.querySelectorAll(".card-text")[0].innerText = "#" + data.leaderboardPos;
 
+    cardTemp.querySelectorAll("#view_profile")[0].addEventListener('click', function() {
+      window.location.href = `/profile.html?uid=${doc.id}`
+    })
+
     cardHolder.appendChild(cardTemp);
   })
 }
