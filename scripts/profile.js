@@ -23,6 +23,7 @@ async function setPastPredictions(userData) {
 
     const correctNode = document.getElementById("correct-prediction-template")
     const incorrectNode = document.getElementById("incorrect-prediction-template")
+    const pendingNode = document.getElementById("pending-prediction-template")
 
     card.querySelectorAll("h3")[0].innerText = name;
     card.querySelectorAll("p")[0].innerText = country;
@@ -39,6 +40,9 @@ async function setPastPredictions(userData) {
         break;
       } else if (id == name && data.winner !== country) {
         card.appendChild(incorrectNode.content.cloneNode(true))
+        break;
+      } else {
+        card.appendChild(pendingNode.content.cloneNode(true))
         break;
       }
     }

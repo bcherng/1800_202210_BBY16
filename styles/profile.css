@@ -23,3 +23,7 @@ body {
 .incorrect-prediction {
   color: red;
 }
+
+.pending-prediction {
+  color: gray;
+}
