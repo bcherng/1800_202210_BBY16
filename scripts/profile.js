@@ -27,6 +27,8 @@ async function setPastPredictions(userData) {
   let snap = await getDoc(userDoc);
   let redeemedSports = snap.data().redeemed || [];
 
+  let correctPredictions = 0;
+
   Object.entries(userData.predictions).forEach(([name, country]) => {
     const template = document.getElementById("past-predictions-template");
 
@@ -65,10 +67,12 @@ async function setPastPredictions(userData) {
       if (redeemedSports.includes(name)) {
         btn.disabled = true;
         card.appendChild(redeemed);
+        correctPredictions += 1;
       } else {
         if (id == name && data.winner == country) {
           btn.disabled = false;
           card.appendChild(correct);
+          correctPredictions += 1;
           break;
         } else if (id == name && data.winner !== country) {
           card.appendChild(incorrect);
@@ -110,6 +114,12 @@ async function setPastPredictions(userData) {
 
     pastPredictionsHolder.appendChild(card);
   });
+
+  await getDoc(userDoc).then((snap) => {
+    updateDoc(userDoc, {
+      correctPredictions: correctPredictions,
+    })
+  })
 }
 
 function setUserData(userData) {
