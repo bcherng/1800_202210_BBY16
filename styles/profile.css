@@ -20,6 +20,10 @@ body {
   color: green;
 }
 
+.redeemed-prediction {
+  color: blue;
+}
+
 .incorrect-prediction {
   color: red;
 }

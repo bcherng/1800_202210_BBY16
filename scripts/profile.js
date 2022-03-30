@@ -1,5 +1,12 @@
 import { db } from "./firebaseAPI_TEAM_BBY_16.js";
-import { doc, getDoc, getDocs, collection, query } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  getDocs,
+  collection,
+  query,
+  updateDoc,
+} from "firebase/firestore";
 import { getID } from "./index/login.js";
 
 const queryString = window.location.search;
@@ -16,14 +23,21 @@ async function setPastPredictions(userData) {
 
   const results = await getDocs(resultsDocs);
 
+  let userDoc = doc(db, `users/${getID()}`);
+  let snap = await getDoc(userDoc);
+  let redeemed = snap.data().redeemed || [];
+
   Object.entries(userData.predictions).forEach(([name, country]) => {
     const template = document.getElementById("past-predictions-template");
 
     const card = template.content.cloneNode(true);
 
-    const correctNode = document.getElementById("correct-prediction-template")
-    const incorrectNode = document.getElementById("incorrect-prediction-template")
-    const pendingNode = document.getElementById("pending-prediction-template")
+    const correctNode = document.getElementById("correct-prediction-template");
+    const incorrectNode = document.getElementById(
+      "incorrect-prediction-template"
+    );
+    const pendingNode = document.getElementById("pending-prediction-template");
+    const redeemedNode = document.getElementById("redeemed-prediction-template");
 
     card.querySelectorAll("h3")[0].innerText = name;
     card.querySelectorAll("p")[0].innerText = country;
@@ -34,20 +48,41 @@ async function setPastPredictions(userData) {
       const id = doc.id;
       const data = doc.data();
 
-      if (id == name && data.winner == country) {
-        btn.disabled = false;
-        card.appendChild(correctNode.content.cloneNode(true))
-        break;
-      } else if (id == name && data.winner !== country) {
-        card.appendChild(incorrectNode.content.cloneNode(true))
-        break;
+      if (redeemed.includes(name)) {
+        btn.disabled = true;
+        card.appendChild(redeemedNode.content.cloneNode(true));
       } else {
-        card.appendChild(pendingNode.content.cloneNode(true))
-        break;
+        if (id == name && data.winner == country) {
+          btn.disabled = false;
+          card.appendChild(correctNode.content.cloneNode(true));
+          break;
+        } else if (id == name && data.winner !== country) {
+          card.appendChild(incorrectNode.content.cloneNode(true));
+          break;
+        } else {
+          card.appendChild(pendingNode.content.cloneNode(true));
+          break;
+        }
       }
     }
 
-    card.appendChild(document.createElement("hr"))
+    card.appendChild(document.createElement("hr"));
+
+    if (!btn.disabled) {
+      btn.addEventListener("click", () => {
+        getDoc(userDoc).then((snap) => {
+          let initial = snap.data().redeemed || [];
+
+          let final = [...initial, name];
+
+          updateDoc(userDoc, {
+            redeemed: final,
+          }).then(() => {
+            btn.disabled = true;
+          });
+        });
+      });
+    }
 
     pastPredictionsHolder.appendChild(card);
   });
@@ -66,6 +101,7 @@ function setUserData(userData) {
 
 function main() {
   const docRef = doc(db, "users", uid);
+
   getDoc(docRef).then((snap) => {
     if (snap.exists()) {
       const data = snap.data();
