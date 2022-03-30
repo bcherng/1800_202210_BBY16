@@ -37,6 +37,25 @@ function update() {
           "cover";
         document.getElementById("splide01-slide01").style.height =
           "100%";
+
+        document.getElementById("splide01-slide02").style.backgroundImage =
+          "url(" + data.banners[1] + ")";
+        document.getElementById("splide01-slide02").style.backgroundRepeat =
+          "no-repeat";
+        document.getElementById("splide01-slide02").style.backgroundSize =
+          "cover";
+        document.getElementById("splide01-slide02").style.height =
+          "100%";
+
+        document.getElementById("splide01-slide03").style.backgroundImage =
+          "url(" + data.banners[2] + ")";
+        document.getElementById("splide01-slide03").style.backgroundRepeat =
+          "no-repeat";
+        document.getElementById("splide01-slide03").style.backgroundSize =
+          "cover";
+        document.getElementById("splide01-slide03").style.height =
+          "100%";
+
         document.getElementById("question").innerHTML = data.Question;
         document.getElementById("option1").innerHTML = data.Option1;
         document.getElementById("option2").innerHTML = data.Option2;
