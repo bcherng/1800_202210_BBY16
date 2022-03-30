@@ -24,7 +24,6 @@ async function setPastPredictions(userData) {
     card.querySelectorAll("h3")[0].innerText = name;
     card.querySelectorAll("p")[0].innerText = country;
 
-
     results.forEach((doc) => {
       const id = doc.id;
       const data = doc.data();

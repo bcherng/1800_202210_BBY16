@@ -1,179 +1,227 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Olympic-k</title>
+    <meta name="Olympic-k" content="my bcit project" />
+    <meta name="author" content="BCIT" />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Olympic-k</title>
-  <meta name="Olympic-k" content="my bcit project" />
-  <meta name="author" content="BCIT" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/redeem-store.css" />
+  </head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-</head>
+  <body>
+    <div id="nav-placeholder"></div>
 
-<body>
-  <div id="nav-placeholder"></div>
+    <!-- CONTENT -->
+    <section class="py-5 text-center container">
+      <div class="row py-lg-2">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <img id="redeemImage" src="images/redeem1.png" />
+          <!-- <h1 class="fw-light fw-bold">Redeem your rewards</h1> -->
+        </div>
+      </div>
+    </section>
 
-  <!-- CONTENT -->
-  <section class="py-5 text-center container">
-    <div class="row py-lg-2">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <img id="redeemImage" src="images/redeem1.png" />
-        <!-- <h1 class="fw-light fw-bold">Redeem your rewards</h1> -->
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="d-flex justify-content-end">
+          <p class="lead mb-4">
+            <b><span id="PointsPlaceHolder"></span> points.</b>
+          </p>
+        </div>
+        <!--Redeem cards-->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image1" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option1"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point1"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image2" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option2"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point2"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image3" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option3"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point3"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image4" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option4"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point4"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image5" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option5"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point5"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image6" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option6"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point6"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image7" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option7"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point7"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image8" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option8"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point8"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy redeem"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" id="image9" />
+              <div class="card-body">
+                <p class="card-text text-center"><span id="option9"></span></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted"><span id="point9"></span></small>
+                  <button
+                    type="button"
+                    class="btn btn-primary button-copy"
+                    onclick="pointChecker()"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+    <div id="footer-placeholder"></div>
 
-      <div class="d-flex justify-content-end">
-        <p class="lead mb-4"><b><span id="PointsPlaceHolder"></span> points.</b></p>
-      </div>
-      <!--Redeem cards-->
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image1" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option1"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point1"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image2" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option2"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point2"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image3" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option3"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point3"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image4" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option4"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point4"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image5" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option5"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point5"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image6" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option6"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point6"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image7" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option7"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point7"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image8" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option8"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point8"></span></small>
-                <button type="button" class="btn btn-primary button-copy redeem"
-                  onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" id = "image9" >
-            <div class="card-body">
-              <p class="card-text text-center"><span id="option9"></span></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted"><span id="point9"></span></small>
-                <button type="button" class="btn btn-primary button-copy " onclick="pointChecker()">Redeem</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div id="footer-placeholder"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-
-  <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
-  <script type="module" src="./scripts/templates/index.js"></script>
-  <script type="module" src="./scripts/redeem-store.js"></script>
-</body>
-
+    <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
+    <script type="module" src="./scripts/templates/index.js"></script>
+    <script type="module" src="./scripts/redeem-store.js"></script>
+  </body>
 </html>

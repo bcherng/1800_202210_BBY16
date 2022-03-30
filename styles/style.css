@@ -110,14 +110,3 @@ body {
   margin-left: 40px;
   margin-right: 40px;
 }
-
-#past-prediction-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#past-prediction-card button {
-  height: fit-content;
-}

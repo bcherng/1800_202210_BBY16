@@ -1,0 +1,8 @@
+.card img {
+    object-fit: cover;
+}
+
+#redeemImage {
+  width: 100%;
+  height: auto;
+}
