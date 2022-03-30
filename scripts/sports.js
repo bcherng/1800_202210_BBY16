@@ -38,7 +38,7 @@ function writeSportsData() {
     DisplayName: "Alpine Skiing",
     Name: "alpineSkiing",
     Description:
-      "is the pastime of sliding down snow-covered slopes on skis with fixed-heel bindings, unlike other types ok skiing(cross-country,Telemark, or ski jumping), which use skis with free-heel bindings.",
+      "Alpine Skiing is the pastime of sliding down snow-covered slopes on skis with fixed-heel bindings, unlike other types ok skiing(cross-country,Telemark, or ski jumping), which use skis with free-heel bindings.",
     Question: "Who do you think will win the Alpine Skiing?",
     Option1: "Switzerland",
     Option2: "Austria",
@@ -50,7 +50,7 @@ function writeSportsData() {
     DisplayName: "Biathlon",
     Name: "biathlon",
     Description:
-      "is a winter sport that combines cross-country skiing and rifle shooting. It is treated as a race, with contestants skiing through a cross-country trail whose distance is divided into shooting rounds.",
+      "Biathlon is a winter sport that combines cross-country skiing and rifle shooting. It is treated as a race, with contestants skiing through a cross-country trail whose distance is divided into shooting rounds.",
     Question: "Who do you think will win the Biathlon?",
     Option1: "France",
     Option2: "Norway",
@@ -74,7 +74,7 @@ function writeSportsData() {
     DisplayName: "Cross Country Skiing",
     Name: "crossCountrySkiing",
     Description:
-      "is a form of skiing where skiers rely on their own locomotion to move across snow-covered terrain, rather than using ski lifts or other forms of assistance.",
+      "Cross country skiing is a form of skiing where skiers rely on their own locomotion to move across snow-covered terrain, rather than using ski lifts or other forms of assistance.",
     Question: "Who do you think will win the Cross Country Skiing?",
     Option1: "Norway",
     Option2: "Sweden",
@@ -110,7 +110,7 @@ function writeSportsData() {
     DisplayName: "Free Style Skating",
     Name: "freeStyleSkating",
     Description:
-      "Figure skating is one of the most popular sports at the Winter Olympics; one could argue it's synonymous with the Games themselves, seeing as it's the oldest sport on the Winter programme.",
+      "Free Style skating is one of the most popular sports at the Winter Olympics; one could argue it's synonymous with the Games themselves, seeing as it's the oldest sport on the Winter programme.",
     Question: "Who do you think will win the Free Style Skating?",
     Option1: "Belarus",
     Option2: "China",
@@ -134,7 +134,7 @@ function writeSportsData() {
     DisplayName: "Luge",
     Name: "luge",
     Description:
-      "is a small one- or two-person sled on which one sleds supine and feet-first. A luger steers by using the calf muscles to flex the sled's runners or by exerting opposite shoulder pressure to the seat.",
+      "Luge is a small one- or two-person sled on which one sleds supine and feet-first. A luger steers by using the calf muscles to flex the sled's runners or by exerting opposite shoulder pressure to the seat.",
     Question: "Who do you think will win the Luge?",
     Option1: "Germany",
     Option2: "Austria",
