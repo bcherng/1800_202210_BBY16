@@ -15,3 +15,11 @@ body {
 #past-prediction-card button {
   height: fit-content;
 }
+
+.correct-prediction {
+  color: green;
+}
+
+.incorrect-prediction {
+  color: red;
+}

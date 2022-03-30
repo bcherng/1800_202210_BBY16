@@ -17,11 +17,6 @@ body {
   grid-template-columns: auto;
 }
 
-#redeemImage {
-  width: 100%;
-  height: auto;
-}
-
 .options {
   display: flex;
 }

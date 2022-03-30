@@ -6,14 +6,14 @@
     <meta name="Olympic-k" content="my bcit project" />
     <meta name="author" content="BCIT" />
 
-    <link rel="stylesheet" href="./styles/profile.css" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="./styles/profile.css" />
   </head>
 
   <body>
@@ -55,15 +55,28 @@
             <div class="card-body" id="past-predictions-holder">
               <h5 class="card-title">Past Predictions</h5>
 
+              <template id="correct-prediction-template">
+                <p class="correct-prediction">Correct Prediction</p>
+              </template>
+              <template id="incorrect-prediction-template">
+                <p class="incorrect-prediction">Incorrect Prediction</p>
+              </template>
+
               <template id="past-predictions-template">
                 <div id="past-prediction-card">
                   <div id="past-sport-country">
                     <h3>Biathlon</h3>
                     <p>Austria</p>
                   </div>
-                  <button type="button" class="btn btn-success" disabled id="redeem">Redeem</button>
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    disabled
+                    id="redeem"
+                  >
+                    Redeem
+                  </button>
                 </div>
-                <hr />
               </template>
             </div>
           </div>

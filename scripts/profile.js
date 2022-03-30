@@ -21,18 +21,29 @@ async function setPastPredictions(userData) {
 
     const card = template.content.cloneNode(true);
 
+    const correctNode = document.getElementById("correct-prediction-template")
+    const incorrectNode = document.getElementById("incorrect-prediction-template")
+
     card.querySelectorAll("h3")[0].innerText = name;
     card.querySelectorAll("p")[0].innerText = country;
 
-    results.forEach((doc) => {
+    const btn = card.querySelectorAll("#redeem")[0];
+
+    for (let doc of results.docs) {
       const id = doc.id;
       const data = doc.data();
 
       if (id == name && data.winner == country) {
-        let btn = card.querySelectorAll("#redeem")[0];
         btn.disabled = false;
+        card.appendChild(correctNode.content.cloneNode(true))
+        break;
+      } else if (id == name && data.winner !== country) {
+        card.appendChild(incorrectNode.content.cloneNode(true))
+        break;
       }
-    });
+    }
+
+    card.appendChild(document.createElement("hr"))
 
     pastPredictionsHolder.appendChild(card);
   });
