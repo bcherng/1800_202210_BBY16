@@ -21,6 +21,14 @@ function update() {
           data.DisplayName;
         document.getElementById("sportsDescriptionPlaceHolder").innerHTML =
           data.Description;
+        document.getElementById("splide01-slide01").style.backgroundImage =
+          "url(" + data.banners[0] + ")";
+        document.getElementById("splide01-slide01").style.backgroundRepeat =
+          "no-repeat";
+        document.getElementById("splide01-slide01").style.backgroundSize =
+          "cover";
+        document.getElementById("splide01-slide01").style.height =
+          "100%";
         document.getElementById("question").innerHTML = data.Question;
         document.getElementById("option1").innerHTML = data.Option1;
         document.getElementById("option2").innerHTML = data.Option2;
