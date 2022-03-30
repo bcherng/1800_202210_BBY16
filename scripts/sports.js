@@ -52,10 +52,10 @@ function writeSportsData() {
     Description:
       "is a winter sport that combines cross-country skiing and rifle shooting. It is treated as a race, with contestants skiing through a cross-country trail whose distance is divided into shooting rounds.",
     Question: "Who do you think will win the Biathlon?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "France",
+    Option2: "Norway",
+    Option3: "Italy",
+    Option4: "Germany",
   });
 
   addDoc(ref, {
@@ -64,9 +64,9 @@ function writeSportsData() {
     Description:
       "Bobsleigh or bobsled is a team winter sport that involves making timed runs down narrow, twisting, banked, iced tracks in a gravity-powered sleigh.",
     Question: "Who do you think will win the Bobsleigh?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
+    Option1: "Germany",
+    Option2: "Germany",
+    Option3: "Republic of Korea",
     Option4: "Switzerland",
   });
 
@@ -76,10 +76,10 @@ function writeSportsData() {
     Description:
       "is a form of skiing where skiers rely on their own locomotion to move across snow-covered terrain, rather than using ski lifts or other forms of assistance.",
     Question: "Who do you think will win the Cross Country Skiing?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Norway",
+    Option2: "Sweden",
+    Option3: "Fnland",
+    Option4: "USA",
   });
 
   addDoc(ref, {
@@ -88,10 +88,10 @@ function writeSportsData() {
     Description:
       "Curling is a sport in which players slide stones on a sheet of ice toward a target area which is segmented into four concentric circles. It is related to bowls, boules, and shuffleboard.",
     Question: "Who do you think will win the Curling?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
+    Option1: "USA",
+    Option2: "Sweden",
     Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option4: "Canada",
   });
 
   addDoc(ref, {
@@ -100,10 +100,10 @@ function writeSportsData() {
     Description:
       "Figure skating is a sport in which individuals, pairs, or groups perform on figure skates on ice. It was the first winter sport to be included in the Olympic Games, when contested at the 1908 Olympics in London.",
     Question: "Who do you think will win the Figure Skating?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Canada",
+    Option2: "France",
+    Option3: "USA",
+    Option4: "Canada",
   });
 
   addDoc(ref, {
@@ -112,10 +112,10 @@ function writeSportsData() {
     Description:
       "Figure skating is one of the most popular sports at the Winter Olympics; one could argue it's synonymous with the Games themselves, seeing as it's the oldest sport on the Winter programme.",
     Question: "Who do you think will win the Free Style Skating?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Belarus",
+    Option2: "China",
+    Option3: "Australia",
+    Option4: "USA",
   });
 
   addDoc(ref, {
@@ -124,10 +124,10 @@ function writeSportsData() {
     Description:
       "Ice hockey is a contact winter team sport played on ice skates, usually on an ice skating rink with lines and markings specific to the sport.",
     Question: "Who do you think will win the Ice Hockey?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Olympic Athletes from Russia",
+    Option2: "Germany",
+    Option3: "Canada ",
+    Option4: "Czech Republic",
   });
 
   addDoc(ref, {
@@ -136,10 +136,10 @@ function writeSportsData() {
     Description:
       "is a small one- or two-person sled on which one sleds supine and feet-first. A luger steers by using the calf muscles to flex the sled's runners or by exerting opposite shoulder pressure to the seat.",
     Question: "Who do you think will win the Luge?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Germany",
+    Option2: "Austria",
+    Option3: "Canada",
+    Option4: "Latvia",
   });
 
   addDoc(ref, {
@@ -148,10 +148,10 @@ function writeSportsData() {
     Description:
       "Nordic combined is a winter sport in which athletes compete in cross-country skiing and ski jumping. The Nordic combined at the Winter Olympics has been held since the first ever Winter Olympics in 1924, while the FIS Nordic Combined World Cup has been held since 1983.",
     Question: "Who do you think will win the Nordic Combined?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Germany",
+    Option2: "Norway",
+    Option3: "Japan",
+    Option4: "Finland",
   });
 
   addDoc(ref, {
@@ -160,10 +160,10 @@ function writeSportsData() {
     Description:
       "Short-track speed skating is a form of competitive ice speed skating. In competitions, multiple skaters (typically between four and six) skate on an oval ice track with a length of 111.111 metres (364.54 ft). .",
     Question: "Who do you think will win the Short Track Speed Skating?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Netherlands",
+    Option2: "Canada",
+    Option3: "Italy",
+    Option4: "Korea",
   });
 
   addDoc(ref, {
@@ -172,10 +172,10 @@ function writeSportsData() {
     Description:
       "Skeleton is a winter sliding sport in which a person rides a small sled, known as a skeleton bobsled (or -sleigh), down a frozen track while lying face down and head-first. The sport and the sled may have been named from the bony appearance of the sled..",
     Question: "Who do you think will win the Skeleton?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Korea",
+    Option2: "Olympic Athletes from Russia",
+    Option3: "Great Britain",
+    Option4: "Latvia",
   });
 
   addDoc(ref, {
@@ -184,10 +184,10 @@ function writeSportsData() {
     Description:
       "Ski jumping is a winter sport in which competitors aim to achieve the farthest jump after sliding down on their skis from a specially designed curved ramp. Along with jump length, competitor's aerial style and other factors also affect the final score.",
     Question: "Who do you think will win the Ski Jumping?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Norway",
+    Option2: "Germany",
+    Option3: "Japan",
+    Option4: "Olympic Athletes from Russia",
   });
 
   addDoc(ref, {
@@ -196,10 +196,10 @@ function writeSportsData() {
     Description:
       "Snowboarding is a recreational and competitive activity that involves descending a snow-covered slope while standing on a snowboard that is almost always attached to a rider's feet. It features in the Winter Olympic Games and Winter Paralympic Games.",
     Question: "Who do you think will win the Snow Boarding?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Austria",
+    Option2: "USA",
+    Option3: "New Zealand",
+    Option4: "Japan",
   });
 
   addDoc(ref, {
@@ -208,9 +208,9 @@ function writeSportsData() {
     Description:
       "Speed skating is a competitive form of ice skating in which the competitors race each other in travelling a certain distance on skates. Types of speed skating are long track speed skating, short track speed skating, and marathon speed skating.",
     Question: "Who do you think will win the Speed Skating?",
-    Option1: "Switzerland",
-    Option2: "Switzerland",
-    Option3: "Switzerland",
-    Option4: "Switzerland",
+    Option1: "Netherlands",
+    Option2: "Japan",
+    Option3: "USA",
+    Option4: "Austria",
   });
 }
