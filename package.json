@@ -15,6 +15,7 @@
     "@splidejs/splide": "^3.6.12",
     "firebase": "^9.6.8",
     "firebaseui": "^0.600.0",
-    "fuse.js": "^6.5.3"
+    "fuse.js": "^6.5.3",
+    "lodash.startcase": "^4.4.0"
   }
 }

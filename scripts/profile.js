@@ -8,6 +8,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { getID } from "./index/login.js";
+import startCase from "lodash.startcase";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -43,7 +44,7 @@ async function setPastPredictions(userData) {
       "redeemed-prediction-template"
     );
 
-    card.querySelectorAll("h3")[0].innerText = name;
+    card.querySelectorAll("h3")[0].innerText = startCase(name);
     card.querySelectorAll("p")[0].innerText = country;
 
     const btn = card.querySelectorAll("#redeem")[0];
