@@ -5,6 +5,7 @@
 .hero-description {
   line-height: 1.5;
 }
+
 #copyright {
   margin-left: 0%;
   width: 2%;
@@ -21,37 +22,41 @@ body {
   display: flex;
 }
 
+.col img {
+  object-fit: cover;
+}
+
 #carousel {
-    position: relative;
-    height: 500px;
-    display: grid;
-    place-items: center;
+  position: relative;
+  height: 500px;
+  display: grid;
+  place-items: center;
 }
 
 .splide {
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 #filter {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.4;
-    position: absolute;
-    pointer-events: none;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  pointer-events: none;
 }
 
 #carousel section {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
 }
 
 .splide__track {
@@ -59,8 +64,8 @@ body {
 }
 
 .splide__slide {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 #splide01-slide01 {
@@ -76,11 +81,11 @@ body {
 }
 
 #sportsNamePlaceHolder {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 #sportsDescriptionPlaceHolder {
-    color: bisque;
+  color: bisque;
 }
 
 #user-cards {
