@@ -24,7 +24,6 @@
       <div class="row py-lg-2">
         <div class="col-lg-6 col-md-8 mx-auto">
           <img id="redeemImage" src="images/redeem1.png" />
-          <!-- <h1 class="fw-light fw-bold">Redeem your rewards</h1> -->
         </div>
       </div>
     </section>
@@ -33,7 +32,7 @@
       <div class="container">
         <div class="d-flex justify-content-end">
           <p class="lead mb-4">
-            <b><span id="PointsPlaceHolder"></span> points.</b>
+            <b><span id="PointsPlaceHolder"></span> points</b>
           </p>
         </div>
         <!--Redeem cards-->
@@ -48,7 +47,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn1"
                   >
                     Redeem
                   </button>
@@ -67,7 +66,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn2"
                   >
                     Redeem
                   </button>
@@ -86,7 +85,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn3"
                   >
                     Redeem
                   </button>
@@ -105,7 +104,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn4"
                   >
                     Redeem
                   </button>
@@ -124,7 +123,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn5"
                   >
                     Redeem
                   </button>
@@ -143,7 +142,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn6"
                   >
                     Redeem
                   </button>
@@ -162,7 +161,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn7"
                   >
                     Redeem
                   </button>
@@ -181,7 +180,7 @@
                   <button
                     type="button"
                     class="btn btn-primary button-copy redeem"
-                    onclick="pointChecker()"
+                    id="btn8"
                   >
                     Redeem
                   </button>
@@ -198,9 +197,9 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted"><span id="point9"></span></small>
                   <button
+                    id="btn9"
                     type="button"
                     class="btn btn-primary button-copy"
-                    onclick="pointChecker()"
                   >
                     Redeem
                   </button>
@@ -220,7 +219,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
+    <script type="module" src="./scripts/firebaseAPI_TEAM_BBY_16.js"></script>
     <script type="module" src="./scripts/templates/index.js"></script>
     <script type="module" src="./scripts/redeem-store.js"></script>
   </body>
