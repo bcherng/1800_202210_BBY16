@@ -101,13 +101,13 @@ async function setPastPredictions(userData) {
             getDoc(userDoc).then((snap) => {
               document.getElementById("userPointsPlaceHolder").innerHTML =
                 snap.data().points;
-                alert(`Congratulations! You redeemed ${name} to get 50 points.`)
+              alert(`Congratulations! You redeemed ${name} to get 50 points.`);
             });
           });
           let correctElement = document.getElementById(`correct-${name}`);
           correctElement.className = "redeemed-prediction";
           correctElement.innerText = "Already Redeemed";
-          btn.disabled = true
+          btn.disabled = true;
         });
       });
     }
@@ -115,11 +115,9 @@ async function setPastPredictions(userData) {
     pastPredictionsHolder.appendChild(card);
   });
 
-  await getDoc(userDoc).then((snap) => {
-    updateDoc(userDoc, {
-      correctPredictions: correctPredictions,
-    })
-  })
+  await updateDoc(userDoc, {
+    correctPredictions: correctPredictions,
+  });
 }
 
 function setUserData(userData) {
