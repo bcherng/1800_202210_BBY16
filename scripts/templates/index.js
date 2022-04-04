@@ -1,7 +1,10 @@
 import { readFileAndSetHtml } from "./readfile.js";
 import { isLoggedIn, logOut } from "../index/login.js";
 
-readFileAndSetHtml("nav-placeholder", "/templates/nav.html.txt").then(() => {
+import navHTML from "../../templates/nav.html.txt"
+import footerHTML from "../../templates/footer.html.txt"
+
+readFileAndSetHtml("nav-placeholder", navHTML).then(() => {
   const logOutButton = document.getElementById("log-out");
   if (!isLoggedIn()) {
     logOutButton.style.display = "none";
@@ -20,4 +23,4 @@ readFileAndSetHtml("nav-placeholder", "/templates/nav.html.txt").then(() => {
   });
 });
 
-readFileAndSetHtml("footer-placeholder", "/templates/footer.html.txt");
+readFileAndSetHtml("footer-placeholder", footerHTML);

@@ -15,6 +15,8 @@ import {
 import Splide from "@splidejs/splide";
 import { getID } from "./index/login.js";
 
+import "@splidejs/splide/dist/css/splide.min.css"
+
 new Splide(".splide").mount();
 
 function update() {
