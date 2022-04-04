@@ -31,6 +31,8 @@ async function update() {
 
     cardHolder.appendChild(cardTemp);
   })
+
+   document.getElementById("sub-url").innerText = "/ leaderboard"
 }
 
 update();

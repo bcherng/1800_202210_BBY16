@@ -19,6 +19,7 @@ import "@splidejs/splide/dist/css/splide.min.css"
 
 new Splide(".splide", {}).mount();
 
+
 function update() {
   let sportsCollection = collection(db, "sportsData");
 
@@ -31,6 +32,7 @@ function update() {
 
       document.getElementById("predictionPlaceHolder").style.display = "none";
     }
+   document.getElementById("sub-url").innerText = "/ sports"
   });
 
   getDocs(sportsCollection).then((snap) => {

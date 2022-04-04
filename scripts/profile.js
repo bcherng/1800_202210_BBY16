@@ -37,6 +37,8 @@ async function setPastPredictions(userData) {
 
   let correctPredictions = 0;
 
+  document.getElementById("sub-url").innerText = "/ profile";
+
   Object.entries(userData.predictions).forEach(([name, country]) => {
     const template = document.getElementById("past-predictions-template");
 

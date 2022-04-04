@@ -5,8 +5,8 @@ import { getID } from "./index/login.js";
 let userPoints = 0;
 
 setUserPoints().then(() => {
-  setCards()
-})
+  setCards();
+});
 
 async function setUserPoints() {
   const token = window.localStorage.getItem("token");
@@ -43,25 +43,25 @@ async function setCards() {
       if (userPoints < reward.points) {
         btn.disabled = true;
       } else {
-        btn.addEventListener('click', () => {
-          alert("Redeemed Code: 84W2yNB6")
+        btn.addEventListener("click", () => {
+          alert("Redeemed Code: 84W2yNB6");
           btn.disabled = true;
 
-          let userDoc = doc(db, `users/${getID()}`)
+          let userDoc = doc(db, `users/${getID()}`);
 
           getDoc(userDoc).then((snap) => {
-            let newPoints = snap.data().points - parseInt(reward.points)
+            let newPoints = snap.data().points - parseInt(reward.points);
             updateDoc(userDoc, {
               points: newPoints,
             }).then(() => {
               setUserPoints().then(() => {
-                setCards()
-              })
-            })
-          })
-        })
+                setCards();
+              });
+            });
+          });
+        });
       }
-      
+
       img.setAttribute("src", reward.img);
 
       points.innerHTML = reward.points + " points";
@@ -70,4 +70,6 @@ async function setCards() {
       i++;
     });
   }
+
+  document.getElementById("sub-url").innerText = "/ store";
 }

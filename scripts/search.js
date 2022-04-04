@@ -18,6 +18,8 @@ async function update() {
     });
   });
 
+  document.getElementById("sub-url").innerText = "/ search";
+
   const fuse = new Fuse(allUsers, { keys: ["name"] });
   const result = fuse.search(searchQuery);
 
