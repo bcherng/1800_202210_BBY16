@@ -31,7 +31,7 @@ async function setPastPredictions(userData) {
 
   const results = await getDocs(resultsDocs);
 
-  let userDoc = doc(db, `users/${getID()}`);
+  let userDoc = doc(db, `users/${uid}`);
   let snap = await getDoc(userDoc);
   let redeemedSports = snap.data().redeemed || [];
 
