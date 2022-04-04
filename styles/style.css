@@ -28,7 +28,6 @@ body {
 
 #carousel {
   position: relative;
-  height: 500px;
   display: grid;
   place-items: center;
 }
@@ -70,14 +69,17 @@ body {
 
 #splide01-slide01 {
   background-color: cornflowerblue;
+  height: auto;
 }
 
 #splide01-slide02 {
   background-color: cadetblue;
+  height: auto;
 }
 
 #splide01-slide03 {
   background-color: burlywood;
+  height: auto;
 }
 
 #sportsNamePlaceHolder {
@@ -86,6 +88,7 @@ body {
 
 #sportsDescriptionPlaceHolder {
   color: bisque;
+  margin: 10px;
 }
 
 #user-cards {
@@ -99,6 +102,10 @@ body {
 #predictionPlaceHolder {
   display: grid;
   place-items: center;
+}
+
+#predictionPlaceHolder #question{
+  text-align: center;
 }
 
 #prediction-thanks {

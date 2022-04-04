@@ -17,7 +17,7 @@ import { getID } from "./index/login.js";
 
 import "@splidejs/splide/dist/css/splide.min.css"
 
-new Splide(".splide").mount();
+new Splide(".splide", {}).mount();
 
 function update() {
   let sportsCollection = collection(db, "sportsData");
