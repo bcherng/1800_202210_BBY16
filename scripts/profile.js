@@ -9,6 +9,13 @@ import {
 } from "firebase/firestore";
 import { getID } from "./index/login.js";
 import startCase from "lodash.startcase";
+import { createAvatar } from '@dicebear/avatars';
+import * as style from '@dicebear/avatars-avataaars-sprites'; 
+
+let svg = createAvatar(style, {
+}); 
+
+document.getElementById("user-img").innerHTML = svg
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);

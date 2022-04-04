@@ -11,6 +11,8 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "@dicebear/avatars": "^4.10.2",
+    "@dicebear/avatars-avataaars-sprites": "^4.10.2",
     "@glidejs/glide": "^3.5.2",
     "@splidejs/splide": "^3.6.12",
     "firebase": "^9.6.8",
