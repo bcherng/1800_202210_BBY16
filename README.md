@@ -1,47 +1,107 @@
-## My Web Application (Add your Title here)
+## Olympic-k
 
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
+* [Resources](#resources)
+* [Acknowledgements](#acknowledgements)
 
 ## General Info
-This browser based web application to ...
-* Hi my name is Brian, I'm excited about this project because I want to get group experience.
-* Hi my name is Simrat, I'm excited about this project because I like programming.
-* My name is Sumit Khanduri and I am excited about this project because it gives me hands on experience.
-	
+An app to promote the Olympics games to everyone by providing user predictions, updated leaderboards, and informational articles, all for free.
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+* ViteJS 
 	
 ## Content
 Content of the project folder:
 
 ```
- Top level of project folder: 
-├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
-
-It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
-
-Firebase hosting files: 
-├── .firebaserc...
-
+├── about-us.html // About us page
+├── CustomLobbypage.html // Custom Lobby Page
+├── favicon.svg // Favicon
+├── firebase.json // Firebase config
+├── firestore.indexes.json // Firebase config
+├── firestore.rules // Firestore rules
+├── friend.html // Friend page
+├── home.html // Home page
+├── index.html // Index page
+├── leaderboard.html // Leaderboard page
+├── package.json // npm packages
+├── package-lock.json // npm lock file
+├── profile.html // Profile page
+├── public // Public assets
+│   └── images
+│       ├── alpine-skiing.jpg
+│       ├── biathlon.jpg
+│       ├── bobsleigh.jpg
+│       ├── burgerKing.png
+│       ├── callOfDuty.jpg
+│       ├── copyright-symbol-svgrepo-com.svg
+│       ├── cross-country.jpg
+│       ├── curling.jpg
+│       ├── dominos.png
+│       ├── figure-skating.jpg
+│       ├── freestyle-skating.webp
+│       ├── giftcard.jpg
+│       ├── hamburger-icon.png
+│       ├── ice-hockey.jpg
+│       ├── insta.svg
+│       ├── kekw.png
+│       ├── leagueofLegends.jpg
+│       ├── luge.jpg
+│       ├── mcdonalds.png
+│       ├── nordic-combined.jpg
+│       ├── pizzaHut.png
+│       ├── redeem1.png
+│       ├── short-track-speed-skating.jpg
+│       ├── skeleton.webp
+│       ├── ski-jumping.webp
+│       ├── snowboarding.webp
+│       ├── speed-skating.jpg
+│       ├── starbucks.png
+│       ├── timhortons.jpg
+│       ├── user-icon.png
+│       └── valorant.jpg
+├── README.md // This file
+├── redeem-store.html // Store page
+├── scripts // Javascript files
+│   ├── authentication.js
+│   ├── firebaseAPI_TEAM_BBY_16.js
+│   ├── friend.js
+│   ├── index
+│   │   ├── index.js
+│   │   └── login.js
+│   ├── leaderboard.js
+│   ├── profile.js
+│   ├── redeem-store.js
+│   ├── search.js
+│   ├── sports.js
+│   └── templates
+│       ├── index.js
+│       └── readfile.js
+├── search.html // Search page
+├── sports.html // Sports page
+├── styles
+│   ├── profile.css
+│   ├── redeem-store.css
+│   └── style.css
+├── templates // HTML Templates
+│   ├── footer.html.txt
+│   ├── nav.html.txt
+│   └── searchbar.html.txt
+└── vite.config.js // Vite config
 
 ```
 
-Tips for file naming files and folders:
-* use lowercase with no spaces
-* use dashes (not underscore) for word separation
+## Resources
+- Images from Google
 
+## Acknowledgements 
+- [Bootstrap](https://getbootstrap.com)
+- [ViteJS](https://vitejs.dev/)
+- [SplideJS](https://splidejs.com/)
+- [Lodash](https://lodash.com/)
