@@ -14,6 +14,7 @@ var uiConfig = {
       var user = authResult.user;
       logIn(user.uid);
 
+      // If the user is new, add them to the users collection with some default values
       if (authResult.additionalUserInfo.isNewUser) {
         setDoc(doc(db, `users/${user.uid}`), {
           name: user.displayName,

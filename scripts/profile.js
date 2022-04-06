@@ -12,11 +12,12 @@ import startCase from "lodash.startcase";
 import { createAvatar } from '@dicebear/avatars';
 import * as style from '@dicebear/avatars-avataaars-sprites'; 
 
+// Randomly generated user avatar
 let svg = createAvatar(style, {
 }); 
-
 document.getElementById("user-img").innerHTML = svg
 
+// Get the UID from the URL and fallback to UID in local storage.
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const uid = urlParams.get("uid") || getID();
@@ -26,11 +27,13 @@ async function setPastPredictions(userData) {
     "past-predictions-holder"
   );
 
+  // Gets the results.
   let resultsCollection = collection(db, "results");
   const resultsDocs = query(resultsCollection);
 
   const results = await getDocs(resultsDocs);
 
+  // Gets the user data
   let userDoc = doc(db, `users/${uid}`);
   let snap = await getDoc(userDoc);
   let redeemedSports = snap.data().redeemed || [];
@@ -39,6 +42,7 @@ async function setPastPredictions(userData) {
 
   document.getElementById("sub-url").innerText = "/ profile";
 
+  // Loop through all user predictions
   Object.entries(userData.predictions).forEach(([name, country]) => {
     const template = document.getElementById("past-predictions-template");
 
@@ -70,10 +74,12 @@ async function setPastPredictions(userData) {
     let pending = pendingNode.content.cloneNode(true);
     pending.firstElementChild.id = `pending-${name}`;
 
+    // Loop through results
     for (let doc of results.docs) {
       const id = doc.id;
       const data = doc.data();
 
+      // Add relative indicator if user predicted correctly or not.
       if (redeemedSports.includes(name)) {
         btn.disabled = true;
         card.appendChild(redeemed);
@@ -96,6 +102,7 @@ async function setPastPredictions(userData) {
 
     card.appendChild(document.createElement("hr"));
 
+    // Enable redeem button if user predicted correctly.
     if (!btn.disabled) {
       btn.addEventListener("click", () => {
         getDoc(userDoc).then((snap) => {
@@ -130,6 +137,7 @@ async function setPastPredictions(userData) {
   });
 }
 
+// Set DOM elements from the user data
 function setUserData(userData) {
   document.getElementById("userRankPlaceHolder").innerHTML =
     userData.leaderboardPos;
@@ -144,6 +152,7 @@ function setUserData(userData) {
 function main() {
   const docRef = doc(db, "users", uid);
 
+  // Get user data and update the DOM.
   getDoc(docRef).then((snap) => {
     if (snap.exists()) {
       const data = snap.data();

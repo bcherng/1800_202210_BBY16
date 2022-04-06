@@ -8,6 +8,7 @@ setUserPoints().then(() => {
   setCards();
 });
 
+// Update the users points
 async function setUserPoints() {
   const token = window.localStorage.getItem("token");
 
@@ -23,6 +24,7 @@ async function setUserPoints() {
   }
 }
 
+// Get gift cards from the database and populates the DOM.
 async function setCards() {
   const docRef2 = doc(db, "Rewards", "giftCards");
   const docSnap2 = await getDoc(docRef2);
@@ -49,6 +51,7 @@ async function setCards() {
 
           let userDoc = doc(db, `users/${getID()}`);
 
+          // Update user points when a reward is redeemed.
           getDoc(userDoc).then((snap) => {
             let newPoints = snap.data().points - parseInt(reward.points);
             updateDoc(userDoc, {

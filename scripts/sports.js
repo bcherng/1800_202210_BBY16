@@ -23,6 +23,8 @@ new Splide(".splide", {}).mount();
 function update() {
   let sportsCollection = collection(db, "sportsData");
 
+  // Replace the predictions section with a thanks message if user has already
+  // predicted this sport.
   hasPredicted().then((ret) => {
     if (ret) {
       document.getElementById("prediction-thanks").style.display = "grid";
@@ -35,6 +37,7 @@ function update() {
    document.getElementById("sub-url").innerText = "/ sports"
   });
 
+  // Get images from the database and add them to the carousel.
   getDocs(sportsCollection).then((snap) => {
     snap.forEach((doc) => {
       let data = doc.data();
@@ -88,6 +91,7 @@ async function hasPredicted() {
   return data.predictions.hasOwnProperty(sportName);
 }
 
+// When the predict button is clicked
 document.getElementById("submit").addEventListener("click", () => {
   let userDoc = doc(db, `users/${getID()}`);
 
@@ -118,6 +122,7 @@ document.getElementById("submit").addEventListener("click", () => {
       checked = option4.innerText;
     }
 
+    // Update the user predictions with the current prediction.
     const initial = data.predictions || {};
     const updates = {
       ...initial,
@@ -133,6 +138,7 @@ document.getElementById("submit").addEventListener("click", () => {
   });
 });
 
+// Function to write sports data to database.
 function writeSportsData() {
   var ref = collection(db, "sportsData");
   addDoc(ref, {

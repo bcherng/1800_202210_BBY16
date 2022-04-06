@@ -1,3 +1,4 @@
+// Makes an HTTP get request and calls callback with the result
 async function get(file, callback) {
   var result = await fetch(file);
 
@@ -7,6 +8,7 @@ async function get(file, callback) {
   }
 }
 
+// Replace an html element with contents of a file
 export async function readFileAndSetHtml(id, file) {
   var element = document.getElementById(id);
 
