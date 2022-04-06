@@ -1,6 +1,8 @@
 ## Olympic-k
 
 * [General info](#general-info)
+* [Development](#development)
+* [Building](#building)
 * [Technologies](#technologies)
 * [Contents](#content)
 * [Resources](#resources)
@@ -8,6 +10,20 @@
 
 ## General Info
 An app to promote the Olympics games to everyone by providing user predictions, updated leaderboards, and informational articles, all for free.
+
+## Development
+```
+npm i
+npm run dev
+```
+
+## Building
+```
+npm i
+npm run build
+npm run preview
+```
+The built files are in the dist folder.
 
 ## Technologies
 Technologies used for this project:
