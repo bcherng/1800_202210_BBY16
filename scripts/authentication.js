@@ -26,10 +26,10 @@ var uiConfig = {
           predictions: [],
           redeemed: [],
         }).then(() => {
-          window.location.assign("/home.html");
+          window.location.assign("/pages/home.html");
         });
       } else {
-        window.location.assign("/home.html");
+        window.location.assign("/pages/home.html");
       }
 
       return false;

@@ -34,7 +34,7 @@ async function update() {
 
 
     cardTemp.querySelectorAll("#view_profile")[0].addEventListener('click', function() {
-      window.location.href = `/profile.html?uid=${val.item.id}`
+      window.location.href = `/pages/profile.html?uid=${val.item.id}`
     })
 
     cardHolder.appendChild(cardTemp);

@@ -26,7 +26,7 @@ async function update() {
     cardTemp.querySelectorAll(".card-text")[0].innerText = data.correctPredictions + " Win(s)";
 
     cardTemp.querySelectorAll("#view_profile")[0].addEventListener('click', function() {
-      window.location.href = `/profile.html?uid=${doc.id}`
+      window.location.href = `/pages/profile.html?uid=${doc.id}`
     })
 
     cardHolder.appendChild(cardTemp);

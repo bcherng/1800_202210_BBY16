@@ -19,7 +19,7 @@ readFileAndSetHtml("nav-placeholder", navHTML).then(() => {
   searchButton.addEventListener("click", (e) => {
     e.preventDefault()
     let latest = document.getElementById("search-input");
-    window.location.href = `/search.html?name=${latest.value}`;
+    window.location.href = `/pages/search.html?name=${latest.value}`;
   });
 });
 
