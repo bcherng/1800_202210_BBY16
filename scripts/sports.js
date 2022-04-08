@@ -364,7 +364,7 @@ function writeSportsData() {
 
   addDoc(ref, {
     DisplayName: "Snow Boarding",
-    Name: "snowBoarding",
+    Name: "snowboarding",
     Description:
       "Snowboarding is a recreational and competitive activity that involves descending a snow-covered slope while standing on a snowboard that is almost always attached to a rider's feet. It features in the Winter Olympic Games and Winter Paralympic Games.",
     Question: "Who do you think will win the Snow Boarding?",
